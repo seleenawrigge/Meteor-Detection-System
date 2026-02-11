@@ -1,0 +1,32 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #0b0e1a;
+  color: white;
+}
+
+.container {
+  padding: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.card, .trend-box, .video-box {
+  background: #1a1f3c;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.alert {
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.alert.blue { background: #2b6cb0; }
+.alert.orange { background: #dd6b20; }
+.alert.red { background: #c53030; }

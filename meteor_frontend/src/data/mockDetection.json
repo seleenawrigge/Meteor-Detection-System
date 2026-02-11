@@ -1,0 +1,8 @@
+{
+  "meteor_id": "MTR-001",
+  "frames_detected": 8,
+  "avg_confidence": 0.78,
+  "trend": "downward",
+  "delta_y": 32,
+  "alert_level": "HIGH"
+}

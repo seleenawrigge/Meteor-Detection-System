@@ -1,0 +1,107 @@
+/* Reset */
+body {
+  font-family: Arial, sans-serif;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+/* 🎥 Fullscreen background video */
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* 🌑 Dark overlay for readability */
+.overlay {
+  min-height: 100vh;
+  background: rgba(11, 14, 26, 0.75);
+  padding: 20px;
+}
+
+/* Layout */
+.container {
+  padding: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+/* Panels */
+.card,
+.trend-box,
+.video-box {
+  background: rgba(26, 31, 60, 0.9);
+  padding: 15px;
+  border-radius: 8px;
+}
+
+/* Alerts */
+.alert {
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+/* Alert levels */
+.alert.blue { background: #2b6cb0; }
+.alert.orange { background: #dd6b20; }
+.alert.red { background: #c53030; }
+
+/* Buttons */
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 6px;
+  border: none;
+}
+
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.overlay {
+  min-height: 100vh;
+  background: rgba(11, 14, 26, 0.75);
+  padding: 20px;
+}
+
+.progress-container {
+  margin-top: 15px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background: #1a1f3c;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-top: 5px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #4fd1c5, #38b2ac);
+  transition: width 0.4s ease;
+}
+
+.loading {
+  font-weight: bold;
+}
+

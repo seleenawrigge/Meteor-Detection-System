@@ -34,7 +34,9 @@ Annotation Tool	Label Studio
 Development Environment	Google Colab / VS Code
 Dataset	NightSkyUCP + Synthetic Data
 Visualization	Matplotlib
+
 Project Architecture
+
 Raw Meteor Videos
         ↓
 Frame Extraction (FFmpeg)
@@ -47,61 +49,24 @@ Trajectory Prediction
 (Kalman Filter / Regression)
         ↓
 Visualization & Reporting
+
 Dataset
-Real Data Sources
 NightSkyUCP Dataset
-NASA CAMS
-ESA Fireball Database
-Synthetic Data
 
-Synthetic meteor footage is generated using:
 
-Stellarium
-Blender
-
-Synthetic data is used to:
-
-Increase dataset diversity
-Simulate rare meteor events
-Generate accurate trajectory labels
-Improve model robustness
-Folder Structure
-project-root/
-│
-├── dataset/
-│   ├── raw/
-│   ├── frames/
-│   ├── labels/
-│   └── synthetic/
-│
-├── preprocessing/
-│   ├── extract_frames.py
-│   └── preprocess.py
-│
-├── training/
-│   ├── train_yolov8.py
-│   └── config.yaml
-│
-├── prediction/
-│   ├── kalman_filter.py
-│   └── regression_predictor.py
-│
-├── visualization/
-│   └── visualize_results.py
-│
-├── reports/
-│
-└── README.md
 Installation
 Clone Repository
 git clone https://github.com/yourusername/meteor-detection-ai.git
 cd meteor-detection-ai
+
 Install Dependencies
 pip install ultralytics
 pip install opencv-python
 pip install matplotlib
 pip install numpy
 pip install pandas
+
+
 Install FFmpeg
 Windows
 
@@ -114,11 +79,14 @@ Add the bin folder to Environment Variables.
 Verify installation:
 
 ffmpeg -version
+
 Frame Extraction
 
 Example FFmpeg command:
 
 ffmpeg -i meteor_video.mp4 -vf fps=5 frames/output_%04d.jpg
+
+
 Labeling Dataset
 
 This project uses:
@@ -178,10 +146,13 @@ This research contributes to:
 
 AI-driven meteor monitoring
 Real-time trajectory prediction
-Synthetic data augmentation for astronomy
 Automated space-event analysis systems
+
 Author
 
 Seleena Wrigge
 BSc (Hons) Computer Science
 Final Year Research Project
+
+
+

@@ -1,125 +1,151 @@
-AI-Driven Meteor Detection and Trajectory Prediction using Computer Vision
-Overview
+# AI-Driven Meteor Detection and Trajectory Prediction
 
-This project focuses on the development of an AI-powered system capable of detecting meteors from night-sky video footage and predicting their trajectories in real time using computer vision and machine learning techniques.
+An AI-powered computer vision system for detecting meteors from night-sky footage and predicting their trajectories using deep learning and computer vision techniques.
 
-The system combines:
 
-YOLOv8 for meteor detection
-Kalman Filter / Polynomial Regression for trajectory prediction
-OpenCV + FFmpeg for preprocessing
-Synthetic data generation using Stellarium and Blender
-Real-world meteor datasets such as NightSkyUCP and NASA CAMS
+# Project Overview
 
-The goal of this research is to improve meteor monitoring systems by providing accurate, automated, and scalable detection and prediction capabilities.
+This research project focuses on developing an intelligent meteor monitoring system capable of:
 
-Features
-Meteor detection from sky footage
-Frame extraction and preprocessing
-Real-time object detection using YOLOv8
-Trajectory prediction and path estimation
-Synthetic meteor data generation
-Bounding box visualization
-Detection confidence scoring
-Exportable reports and prediction outputs
-Dataset augmentation and annotation pipeline
-Tech Stack
-Category	Technology
-Programming Language	Python
-Deep Learning	PyTorch
-Object Detection	YOLOv8
-Computer Vision	OpenCV
-Video Processing	FFmpeg
-Annotation Tool	Label Studio
-Development Environment	Google Colab / VS Code
-Dataset	NightSkyUCP + Synthetic Data
-Visualization	Matplotlib
+- Detecting meteors from sky footage using AI
+- Predicting meteor trajectories in real time
+- Processing astronomical video datasets
+- Improving meteor analysis through computer vision techniques
 
-Project Architecture
+The system combines deep learning, image preprocessing, and trajectory prediction methods to create an automated meteor analysis pipeline.
 
+---
+
+# Objectives
+
+- Develop a meteor detection model using YOLOv8
+- Predict meteor movement using trajectory estimation algorithms
+- Reduce false positives from objects such as birds, planes, and satellites
+- Build a preprocessing and annotation workflow for meteor datasets
+- Evaluate the performance of meteor detection and prediction models
+
+---
+
+# Technologies Used
+
+## Programming and AI
+
+- Python
+- PyTorch
+- YOLOv8
+- OpenCV
+
+## Data Processing
+
+- FFmpeg
+- NumPy
+- Pandas
+
+## Annotation and Training
+
+- Label Studio
+- Google Colab
+
+---
+
+# Dataset
+
+## NightSkyUCP Dataset
+
+The project uses the NightSkyUCP meteor dataset for:
+
+- Meteor video samples
+- Non-meteor video samples
+- Model training and validation
+- Detection and trajectory analysis
+
+The dataset contains real-world night-sky footage used to train and evaluate the AI model.
+
+---
+
+# System Workflow
+
+```text
 Raw Meteor Videos
         ↓
 Frame Extraction (FFmpeg)
         ↓
-Preprocessing (OpenCV)
+Image Preprocessing (OpenCV)
         ↓
-YOLOv8 Meteor Detection
+Meteor Detection (YOLOv8)
         ↓
 Trajectory Prediction
 (Kalman Filter / Regression)
         ↓
 Visualization & Reporting
 
-Dataset
-NightSkyUCP Dataset
+
+Core Features
+Meteor Detection
+
+Detect meteors from night-sky footage using YOLOv8 object detection.
+
+Trajectory Prediction
+
+Estimate meteor movement and future trajectory using:
+
+Kalman Filter
+Polynomial Regression
+Data Preprocessing
+
+Process raw videos through:
+
+Frame extraction
+Noise reduction
+Brightness normalization
+Visualization
+
+Generate:
+
+Bounding boxes
+Detection overlays
+Prediction paths
+Reports and exports
 
 
 Installation
-
-Clone Repository
+Clone the Repository
 git clone https://github.com/yourusername/meteor-detection-ai.git
 cd meteor-detection-ai
-
 Install Dependencies
-
 pip install ultralytics
 pip install opencv-python
 pip install matplotlib
 pip install numpy
 pip install pandas
-
-
 Install FFmpeg
-Windows
 
 Download FFmpeg from:
 
-FFmpeg Official Builds
-
-Add the bin folder to Environment Variables.
+https://www.gyan.dev/ffmpeg/builds/
 
 Verify installation:
 
 ffmpeg -version
-
 Frame Extraction
 
 Example FFmpeg command:
 
 ffmpeg -i meteor_video.mp4 -vf fps=5 frames/output_%04d.jpg
+Dataset Annotation
 
+This project uses Label Studio for image annotation.
 
-Labeling Dataset
-
-This project uses:
-
-Label Studio
-
-For annotation:
+Annotation workflow:
 
 Import extracted frames
 Draw bounding boxes around meteors
 Export labels in YOLO format
 Model Training
 
-Train YOLOv8 model:
+Train the YOLOv8 model using:
 
 yolo detect train data=config.yaml model=yolov8n.pt epochs=50 imgsz=640
-Trajectory Prediction
-
-Trajectory prediction is performed using:
-
-Kalman Filter
-Polynomial Regression
-
-Input:
-
-Detected meteor coordinates (x, y, t)
-
-Output:
-
-Predicted meteor path
-Future position estimation
 Evaluation Metrics
 Detection Metrics
 Precision
@@ -133,28 +159,32 @@ Current Progress
 Dataset collection completed
 Frame extraction pipeline completed
 FFmpeg preprocessing implemented
-Annotation workflow established
-YOLOv8 training preparation in progress
-Synthetic data pipeline under development
+Annotation workflow prepared
+YOLOv8 model training in progress
+Trajectory prediction module under development
 Future Improvements
-Real-time live meteor tracking
-Improved synthetic data realism
+Real-time meteor tracking
+Web-based monitoring dashboard
 Multi-camera trajectory estimation
 Automated alert system
-Deployment as a web-based monitoring platform
+Improved detection accuracy
 Research Contribution
 
-This research contributes to:
+This project contributes to:
 
-AI-driven meteor monitoring
+AI-based meteor monitoring
 Real-time trajectory prediction
+Computer vision applications in astronomy
 Automated space-event analysis systems
-
 Author
 
 Seleena Wrigge
 BSc (Hons) Computer Science
 Final Year Research Project
+
+License
+
+This project is developed for academic and research purposes.
 
 
 

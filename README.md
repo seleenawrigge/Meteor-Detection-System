@@ -61,6 +61,7 @@ git clone https://github.com/yourusername/meteor-detection-ai.git
 cd meteor-detection-ai
 
 Install Dependencies
+
 pip install ultralytics
 pip install opencv-python
 pip install matplotlib
